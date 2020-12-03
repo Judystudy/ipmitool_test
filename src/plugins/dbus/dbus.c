@@ -137,7 +137,9 @@ static int ipmi_dbus_method_send_message(sd_bus_message *msg, void *userdata,
 		lprintf(LOG_ERR, "%s: data too long!\n", __func__);
 		goto out;
 	}
-
+    lprintf("zxy 9000000000000000000000");
+    lprintf("recv_cc:    ", recv_cc);
+    lprintf("data:    ", data);
 	if (recv_seq == seq) {
 		rsp.ccode = recv_cc;
 		rsp.data_len = n;
